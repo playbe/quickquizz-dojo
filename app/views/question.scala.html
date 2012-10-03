@@ -1,0 +1,12 @@
+@(myForm: Form[Question])
+
+@main("Welcome to Play 2.0") {
+    @helper.form(action = routes.Application.submitQuestion()) {
+
+        @helper.inputText(myForm("text"))
+
+        @helper.inputText(myForm("answer"))
+        
+        <input type="submit" value="Add question" />
+    }
+}

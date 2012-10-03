@@ -1,0 +1,14 @@
+@(list: List[Question])
+
+@main("Welcome to Play 2.0") {
+
+    <table>
+    @for(question <- list) {
+        <tr>
+            <td>@question.text<td>
+            <td>@question.isAnswered<td>
+            <td>@question.answer<td>
+        </tr>
+    }
+    </table>
+}
